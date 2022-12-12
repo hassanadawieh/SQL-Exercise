@@ -11,3 +11,8 @@ INSERT INTO graduates (ID,name,Age,Gender,Points)
 SELECT ID,name,Age,Gender,Points, FROM students WHERE name='layal';
 UPDATE graduates SET Graduation="08/09/2018" WHERE name="layal";
 DELETE FROM students WHERE name="layal";
+
+
+SELECT employees.name,employees.Company,companies.date FROM employees,companies WHERE employees.Company=companies.name;
+SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.name WHERE companies.date<"2000";
+SELECT companies.name FROM companies INNER JOIN employees ON employees.Role="Graphic Designer";
