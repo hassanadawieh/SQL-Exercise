@@ -16,3 +16,9 @@ DELETE FROM students WHERE name="layal";
 SELECT employees.name,employees.Company,companies.date FROM employees,companies WHERE employees.Company=companies.name;
 SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.name WHERE companies.date<"2000";
 SELECT companies.name FROM companies INNER JOIN employees ON employees.Role="Graphic Designer";
+
+SELECT name FROM students WHERE Points=(SELECT max(points)FROM students);
+SELECT avg("points")FROM students;
+SELECT count(ID)FROM students WHERE points="500";
+SELECT name FROM students WHERE name like "%s%";
+SELECT * FROM students ORDER by points DESC;
